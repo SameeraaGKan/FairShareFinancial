@@ -1,0 +1,294 @@
+@font-face {
+    font-family: "BetterFly";
+    src: url("../fonts/betterfly-draft-webfront.woff2") format("woff2"),
+        url("../fonts/betterfly-draft-webfront.woff") format("woff"),
+
+}
+
+@font-face {
+    font-family: "BFNarrow";
+    src: url("../fonts/betterfly-narrow-webfront.woff2") format("woff2"),
+        url("../fonts/betterfly-draft-webfront.woff") format("woff"),
+}
+
+@font-face {
+    font-family: "Crimson Text";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Crimson Text Regular"), local("CrimsonText-Regular"),
+        url("https://fonts.gstatic.com/s/crimsontext/v8/wlp2gwHKFkZgtmSR3NB0oRJfbwhTIfFd3A.woff2")
+            format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: "Crimson Text";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Crimson Text Bold"), local("CrimsonText-Bold"),
+        url("https://fonts.gstatic.com/s/crimsontext/v8/wlppgwHKFkZgtmSR3NB0oRJX1C1GDNNQ9rJPfw.woff2")
+            format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root { 
+  --clr-text: #0c1505;
+  --clr-dark_green: #1e5631;
+  --clr-medium_green:#08a045;
+  --clr-medium_yellow: #FFD700;
+  --clr-accent: #76ba1b;
+  --clr-title: 
+
+  --ff-title: "BFNbuarrow", times;
+  --ff-serif: "Crimson Text", serif;
+  --ff-logo: "Betterfly", times;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--ff-serif);
+    color: var(--clr-text);
+    font-size: 1.25rem;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    justify-content: center;
+}
+
+section {
+    padding: 3em 1em;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, p {
+     margin: 0;
+}
+
+ h2, h3{
+    font-family: var(--ff-title);
+    line-height: 1;
+    letter-spacing: 1px;
+ }
+
+ h2{
+    font-size: 3.75rem;
+ }
+
+ p{
+    margin-bottom: 0.85em;
+ }
+
+ .section-title-small {
+    font-size: 20 em;
+ }
+
+ .section-title-small small {
+    font-size: large;
+    display: 20 ;
+ }
+ 
+
+ .logo {
+    font-family: var(--ff-logo);
+    text-align: center;
+ }
+
+
+ .text-primary { 
+    color: var(--clr-medium_yellow);
+    font-size: 1.2em;
+}
+
+ .logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 4em; 
+ }
+ 
+ /* Navigation */
+
+header {
+    padding: 1em 0 2em;
+}
+
+ nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5em;
+    color: var(--clr-dark_green);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--clr-accent);
+    text-decoration: underline;
+}
+
+ /* Buttons */
+
+ .btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 3em 1em;
+    flex-direction: column;
+ }
+
+ .btn{
+    padding: 1em 1em;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0.5em 0;
+    border-radius: 0.35em;
+ }
+
+ .btn-primary{
+    background: var(--clr-dark_green);
+    display: inline-block;
+ }
+
+ .btn-primary:hover {
+    background: var(--clr-accent);
+ }
+
+
+
+ /* Homepage style */
+
+.hero{
+    background-color: var(--clr-dark_green);
+    background-image: url(../img/);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 15vh 1em;
+}
+
+.about-us{
+    background: var(--clr-medium_green);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    padding: 0;
+}
+
+.about-us__intro {
+    background-image: url(../img/fidelity.jpg);
+    padding: 0.5vh 0.5em;  
+    margin-top: 2.5em; 
+    margin-bottom: 0.5em;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+.about-us__body {
+    padding: 1.5em 1em 1em;
+}
+
+.order-online {
+    background: #f0f0f0;
+
+}
+
+.take-our-diagnostic-quiz {
+    background: rgba(255, 255, 255, 0.696);
+    
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    /* background: #423131; */
+    border-radius: 1em;
+   /* border: 1px solid red; */
+    overflow: hidden;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}
+
+.product:last-of-type {
+    margin-bottom: 2em;
+}
+
+.product__content {
+    padding: 1.5em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+footer{
+    background: var(--clr-dark_green);
+    padding: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+footer a { 
+    color: inherit
+}
+
+.footer-nav,
+.footer-social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav a{
+    padding: 0;
+    text-decoration: none;
+}
+
+.footer-nav a:hover{
+    text-decoration: underline;
+}
+
+
+.social-link {
+    display: inline-block;
+    margin-bottom: 2px
+}
+
+.social-icon {
+    width: 10px;
+}
